@@ -1,5 +1,6 @@
 import sys
 import pygame
+import units
 
 from gaia_project.board import GameBoard
 from gaia_project.constants import BASIC_4P_SETUP
@@ -24,7 +25,7 @@ if __name__ == '__main__':
           pygame.quit()
           sys.exit()
         if event.type == MOUSEBUTTONDOWN:
-          print(units.get_cell(event.pos)) 
+          print(b.units.get_cell(event.pos))
 
       window.fill( pygame.Color('black'))
       b.paint(window, (0,0))

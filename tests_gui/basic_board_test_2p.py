@@ -24,7 +24,7 @@ if __name__ == '__main__':
           pygame.quit()
           sys.exit()
         if event.type == MOUSEBUTTONDOWN:
-          print(units.get_cell(event.pos)) 
+          print(b.units.get_cell(event.pos))
 
       window.fill( pygame.Color('black'))
       b.paint(window, (0,0))
