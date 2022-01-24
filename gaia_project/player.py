@@ -4,7 +4,7 @@ from .constants import (INCOME_CHART, STARTING_POWER, BUILDING_COSTS,
                         BUILDING_PATHS, STARTING_RESOURCES)
 from .tile import Tile
 from .effect import Effect
-from .terrain import terrain_distance
+from gaia_project.faction_board.terrain import terrain_distance
 from .automa import Automa
 
 import numpy as np

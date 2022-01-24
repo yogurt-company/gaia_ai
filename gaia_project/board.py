@@ -29,7 +29,7 @@ class Planet(MapUnit):
     if self.highlight:
       pass
 
-#TODO someday, maybe make the Buildings 3D models of real game pieces
+#TODO someday, maybe make the Buildings 3D models of real game pieces Never
 
 #class Building(MapUnit):
 #  __metaclass__ = MapUnit_Meta
