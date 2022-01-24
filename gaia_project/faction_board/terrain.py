@@ -1,4 +1,4 @@
-from .utils import GaiaProjectValidationError
+from gaia_project.utils import GaiaProjectValidationError
 
 def terrain_distance(a, b):
   terrains = {'terra' : 0,

@@ -37,7 +37,7 @@ class TechBoardRender(pygame.Surface):
                    terraforming_federation=None):
     self.advanced_tech_tiles = advanced_tech_tiles
     self.player_techs = player_techs
-    self.terraforming_federation = terraforiming_federation
+    self.terraforming_federation = terraforming_federation
     #TODO add available power actions
 
   def draw(self):
