@@ -2,17 +2,17 @@ import pygame
 
 from traits.api import (HasPrivateTraits, Instance, Int, Dict, List, Enum, Str,
                         Either, Any, Property)
-from .player import Player
-from .constants import TECH_BOARD_COLOR_MAP, COMPONENT_COLOR_MAP
-from .tile import (BonusTile, RoundScoringTile, FinalScoringTile, 
-                   FederationTile, TechTile)
+from gaia_project.player import Player
+from gaia_project.constants import TECH_BOARD_COLOR_MAP, COMPONENT_COLOR_MAP
+from gaia_project.tile import (BonusTile, RoundScoringTile, FinalScoringTile,
+                               FederationTile, TechTile)
 
 import numpy as np
 
-from .move_action import (Interaction, MoveAction, FreeAction, 
-                         EventDescription, PassiveCharge)
-from .utils import (text, text_size, GaiaProjectUIError, 
-                    GaiaProjectValidationError)
+from gaia_project.move_action import (Interaction, MoveAction, FreeAction,
+                                      EventDescription, PassiveCharge)
+from gaia_project.utils import (text, text_size, GaiaProjectUIError,
+                                GaiaProjectValidationError)
 
 class PlayerPanelRender(pygame.Surface):
 
