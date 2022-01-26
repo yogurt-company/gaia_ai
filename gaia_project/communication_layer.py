@@ -1,16 +1,16 @@
-from traits.api import (HasPrivateTraits, Instance, List, Dict, Any)
+from traits.api import (HasPrivateTraits, Instance, List, Dict)
 
 from .player import Player
 from .board import GameBoard
 from .tech_board import TechBoard
-from .player_panel import PlayerPanel
+from gaia_project.faction_board.player_panel import PlayerPanel
 from .layout import Layout
 
 from .constants import BASIC_4P_SETUP
 
 import pygame
 import sys
-import threading
+
 
 class CommunicationLayer(HasPrivateTraits):
   pass
