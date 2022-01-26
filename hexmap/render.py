@@ -1,7 +1,9 @@
 from abc import ABCMeta, abstractmethod
 import pygame
 import math
-from hexmap.map import Grid
+from hexmap.map import Grid, Map, MapUnit
+import sys
+
 
 SQRT3 = math.sqrt( 3 )
 
@@ -185,8 +187,6 @@ def trim_cell( surface ):
 
 
 if __name__ == '__main__':
-  from .map import Map, MapUnit
-  import sys
 
   class Unit( MapUnit ):
     color = pygame.Color( 200, 200, 200 )
