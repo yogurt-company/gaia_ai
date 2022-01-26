@@ -3,7 +3,7 @@ from traits.api import (HasPrivateTraits, Int, Instance, Property, Enum, Any)
 
 from .board import GameBoard
 from .tech_board import TechBoard
-from .player_panel import PlayerPanel
+from gaia_project.faction_board.player_panel import PlayerPanel
 
 import pygame
 import numpy as np
