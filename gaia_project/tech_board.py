@@ -1,3 +1,5 @@
+import logging
+
 import pygame
 import pygame.freetype
 from traits.api import (HasPrivateTraits, List, Bool, Property, Dict, Instance,
@@ -149,7 +151,8 @@ class TechBoardRender(pygame.Surface):
                      ).astype(int)
     ex_p = self.width//10
 
-    octy = tuple(gy[-1:] + int(ey*y_mult) for y_mult in np.linspace(.2, .7, 4))
+    # octy = tuple(gy[-1:] + int(ey*y_mult) for y_mult in np.linspace(.2, .7, 4))
+    octy = tuple(gy[-1] + int(ey*y_mult) for y_mult in np.linspace(.2, .7, 4))
 
     for i, x in enumerate(gx_p):
       #draw gray squares and black grid outlines
@@ -192,9 +195,13 @@ class TechBoardRender(pygame.Surface):
                              (octx[3], octy[2]), (octx[1], octy[0])))
 
       #draw the actions cost
-      text(self, str(self.power_actions[i]._cost_amount), 
-                  octx[0], gy[-1:]+(octy[0]-gy[-1:])//3,
+      text(self, str(self.power_actions[i]._cost_amount),
+                  octx[0], gy[-1]+(octy[0]-gy[-1])//3,
                   octx[1]-octx[0], octy[1]-octy[0], color=pa_color)
+
+      # text(self, str(self.power_actions[i]._cost_amount),
+      #             octx[0], gy[-1:]+(octy[0]-gy[-1:])//3,
+      #             octx[1]-octx[0], octy[1]-octy[0], color=pa_color)
                   
 
       #draw the action outline again
